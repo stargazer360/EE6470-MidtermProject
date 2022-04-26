@@ -8,7 +8,7 @@
 #include "Testbench.h"
 
 Testbench::Testbench(sc_module_name n) : sc_module(n) {
-    SC_THREAD(find_UCT);
+    SC_THREAD(find_tangent);
     sensitive << i_clk.pos();
     dont_initialize();
     SC_THREAD(fetch_result);
@@ -18,7 +18,7 @@ Testbench::Testbench(sc_module_name n) : sc_module(n) {
 
 Testbench::~Testbench(){}
 
-void Testbench::find_UCT() {
+void Testbench::find_tangent() {
 #ifndef NATIVE_SYSTEMC
     o_points.reset();
 #endif
