@@ -38,7 +38,7 @@ private:
     int low, high;  
     sc_event index_updated;
 
-    void find_UCT(); // find upper common tangent
+    void find_tangent(); // find upper common tangent
     void fetch_result();
 };
 #endif
